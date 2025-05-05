@@ -1,0 +1,101 @@
+﻿@model IEnumerable<Country>
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.independent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.unMember)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.region)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.subregion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.landlocked)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.area)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cca3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.flag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.population)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fifa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.startOfWeek)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.independent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.unMember)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.region)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.subregion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.landlocked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.area)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cca3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.flag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.population)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fifa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.startOfWeek)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
